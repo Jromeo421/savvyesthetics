@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SeniorProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
+  </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><%= image_tag('logos/beauty_jamie.jpg', size: '40x40', alt: 'savvy logo') %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/pages/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/about">About Savvy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/gallery">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/doterra">Doterra</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pages/services">Services</a>
+      </li>
+      <li>
+        <a class="nav-link" href="/pages/contact">Contact Us</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+ </div>
+  <div class="jumbotron jumbotron-fluid" id="navcolor">
+  <div class="container">
+    <h1 class="display-2">Savvy Esthetics</h1>
+    <p class="lead">If its meant to be, it'll be....</p>
+  </div>
+</div>
+        <%= yield %>
+
+  
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-3" id="navcolor">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Site Map</h5>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          <li>
+            <a class="nav-link" href="/pages/services">Eyelash Extensions</a>
+          </li>
+          <li>
+            <a class="nav-link"href="/pages/services">Permanent Cosmetics</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/pages/services">Spray Tans</a>
+          </li>
+          <li><a class="nav-link" href="/pages/services">Facials</a></li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+
+        <ul class="list-unstyled">
+          <li>
+            <a class="nav-link" href="/pages/services">Microdermabrasion</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/pages/services">Chemical Peels</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/pages/services">Tinting</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/pages/services">Waxing</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3"><a href="https://www.doterra.com/US/en/site/jamiehugh"><%= image_tag('logos/doterra-wellness.jpg', size: '70x30') %></a>  &nbsp; © 2007 &nbsp; <strong>&nbsp;Jamie Hugh&nbsp;</strong> D.B.A. &nbsp; <strong>&nbsp;Savvy Esthetics&nbsp;</strong> &nbsp; |  <a href="/pages/cancellation">Cancellation Policy</a> &nbsp;| &nbsp; <a href="https://www.instagram.com/savvyesthetics"><%= image_tag('logos/instagram_logo.png', size: '50x50') %></a>&nbsp;|&nbsp; <a href="https://www.facebook.com/savvyesthetics/"><%= image_tag('logos/facebook_img.png', size: '40x40') %></a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+<script src="javascripts/jquery.min.js"></script>
+      <script src="javascripts/jquery.scrolly.min.js"></script>
+      <script src="javascripts/skel.min.js"></script>
+      <script src="javascripts/util.js"></script>
+<script src="javascripts/main.js"></script>
+  </body>
+</html>
